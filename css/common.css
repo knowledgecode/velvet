@@ -1,0 +1,60 @@
+html, body {
+  font-family: "Raleway", sans-serif;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header {
+  background-color: #80273f;
+  height: 48px;
+}
+
+.title-box {
+  height: 144px;
+  position: relative;
+}
+
+.home {
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  left: 0;
+  line-height: 48px;
+  padding: 0 24px;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+}
+
+.github {
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 48px;
+  padding: 0 24px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  text-decoration: none;
+  top: 0;
+}
+
+footer {
+  color: #80273f;
+  font-size: 12px;
+  height: 144px;
+  line-height: 48px;
+  margin: 0;
+  text-align: center;
+}
+
+.copyright {
+  margin: 0;
+  position: relative;
+  top: 48px;
+}
+

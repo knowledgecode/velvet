@@ -1,0 +1,12 @@
+#!/bin/bash -eu
+
+url="http://closure-compiler.appspot.com/compile"
+input=$1
+output="${input%.*}.min.js"
+js_code=`cat $input`
+
+curl --silent \
+    --data-urlencode "js_code=$js_code" \
+    --data-urlencode "output_info=compiled_code" \
+    $url > $output
+

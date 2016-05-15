@@ -1,0 +1,141 @@
+/*csslint box-sizing: false */
+
+.velvet {
+  color: #2f5d50;
+  font-family: "Montserrat";
+  font-size: 48px;
+  line-height: 96px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.description {
+  color: #80273f;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 16px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.cube-box {
+  height: 240px;
+  margin: 0 auto;
+  position: relative;
+  width: 240px;
+}
+
+.cube {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.face {
+  border: 1px #fff solid;
+  box-sizing: border-box;
+  border-radius: 6px;
+  height: 120px;
+  left: 60px;
+  opacity: 0.8;
+  position: absolute;
+  top: 60px;
+  width: 120px;
+}
+
+.cube1 {
+  background-color: #f00;
+  -webkit-transform: rotateX(210deg) rotateY(315deg) rotateZ(0) translateZ(60px);
+     -moz-transform: rotateX(210deg) rotateY(315deg) rotateZ(0) translateZ(60px);
+      -ms-transform: rotateX(210deg) rotateY(315deg) rotateZ(0) translateZ(60px);
+       -o-transform: rotateX(210deg) rotateY(315deg) rotateZ(0) translateZ(60px);
+          transform: rotateX(210deg) rotateY(315deg) rotateZ(0) translateZ(60px);
+}
+
+.cube2 {
+  background-color: #00f;
+  -webkit-transform: rotateX(120deg) rotateY(0) rotateZ(315deg) translateZ(60px);
+     -moz-transform: rotateX(120deg) rotateY(0) rotateZ(315deg) translateZ(60px);
+      -ms-transform: rotateX(120deg) rotateY(0) rotateZ(315deg) translateZ(60px);
+       -o-transform: rotateX(120deg) rotateY(0) rotateZ(315deg) translateZ(60px);
+          transform: rotateX(120deg) rotateY(0) rotateZ(315deg) translateZ(60px);
+}
+
+.cube3 {
+  background-color: #f70;
+  -webkit-transform: rotateX(210deg) rotateY(45deg) rotateZ(270deg) translateZ(60px);
+     -moz-transform: rotateX(210deg) rotateY(45deg) rotateZ(270deg) translateZ(60px);
+      -ms-transform: rotateX(210deg) rotateY(45deg) rotateZ(270deg) translateZ(60px);
+       -o-transform: rotateX(210deg) rotateY(45deg) rotateZ(270deg) translateZ(60px);
+          transform: rotateX(210deg) rotateY(45deg) rotateZ(270deg) translateZ(60px);
+}
+
+.cube4 {
+  background-color: #0f0;
+  -webkit-transform: rotateX(30deg) rotateY(315deg) rotateZ(270deg) translateZ(60px);
+     -moz-transform: rotateX(30deg) rotateY(315deg) rotateZ(270deg) translateZ(60px);
+      -ms-transform: rotateX(30deg) rotateY(315deg) rotateZ(270deg) translateZ(60px);
+       -o-transform: rotateX(30deg) rotateY(315deg) rotateZ(270deg) translateZ(60px);
+          transform: rotateX(30deg) rotateY(315deg) rotateZ(270deg) translateZ(60px);
+}
+
+.cube5 {
+  background-color: #f0f;
+  -webkit-transform: rotateX(300deg) rotateY(0deg) rotateZ(45deg) translateZ(60px);
+     -moz-transform: rotateX(300deg) rotateY(0deg) rotateZ(45deg) translateZ(60px);
+      -ms-transform: rotateX(300deg) rotateY(0deg) rotateZ(45deg) translateZ(60px);
+       -o-transform: rotateX(300deg) rotateY(0deg) rotateZ(45deg) translateZ(60px);
+          transform: rotateX(300deg) rotateY(0deg) rotateZ(45deg) translateZ(60px);
+}
+
+.cube6 {
+  background-color: #0ff;
+  -webkit-transform: rotateX(30deg) rotateY(45deg) rotateZ(0) translateZ(60px);
+     -moz-transform: rotateX(30deg) rotateY(45deg) rotateZ(0) translateZ(60px);
+      -ms-transform: rotateX(30deg) rotateY(45deg) rotateZ(0) translateZ(60px);
+       -o-transform: rotateX(30deg) rotateY(45deg) rotateZ(0) translateZ(60px);
+          transform: rotateX(30deg) rotateY(45deg) rotateZ(0) translateZ(60px);
+}
+
+.circle {
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  width: 20px;
+}
+
+.touchme {
+  bottom: 0;
+  color: #80273f;
+  font-size: 12px;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.menubox {
+  height: 64px;
+  margin: 64px auto;
+  width: 320px;
+}
+
+.menubutton {
+  background-color: #80273f;
+  color: #fff;
+  display: inline-block;
+  height: 64px;
+  line-height: 64px;
+  margin: 0 14px;
+  text-align: center;
+  text-decoration: none;
+  width: 128px;
+}
+

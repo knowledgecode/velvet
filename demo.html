@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <link rel="stylesheet" href="/css/common.min.css?_=20160515">
+    <link rel="stylesheet" href="/css/demo.min.css?_=20160515">
+    <title>Velvet: A JavaScript Library for DOM Animations</title>
+  </head>
+  <body>
+    <header>
+      <a class="home" href="/index.html">Velvet</a>
+      <a class="github" href="https://github.com/knowledgecode/velvet" target="_blank">GitHub</a>
+    </header>
+    <h2 class="demo">DEMO</h2>
+    <div class="example-box">
+      <div class="example">
+        <div class="caption">translateX</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 10px; top: 110px;"></div>
+          <div class="anim" id="translateX" style="left: 10px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="translateX"></div>
+          <div class="play button" data-example-id="translateX"></div>
+          <div class="cancel button" data-example-id="translateX"></div>
+          <div class="finish button" data-example-id="translateX"></div>
+          <div class="reverse button" data-example-id="translateX"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">translateY</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 10px;"></div>
+          <div class="anim" id="translateY" style="left: 110px; top: 10px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="translateY"></div>
+          <div class="play button" data-example-id="translateY"></div>
+          <div class="cancel button" data-example-id="translateY"></div>
+          <div class="finish button" data-example-id="translateY"></div>
+          <div class="reverse button" data-example-id="translateY"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">translateZ<span class="not-supported"> (Not supported)</span></div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="translateZ" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="translateZ"></div>
+          <div class="play button" data-example-id="translateZ"></div>
+          <div class="cancel button" data-example-id="translateZ"></div>
+          <div class="finish button" data-example-id="translateZ"></div>
+          <div class="reverse button" data-example-id="translateZ"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">scale</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="scale" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="scale"></div>
+          <div class="play button" data-example-id="scale"></div>
+          <div class="cancel button" data-example-id="scale"></div>
+          <div class="finish button" data-example-id="scale"></div>
+          <div class="reverse button" data-example-id="scale"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">scaleX</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="scaleX" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="scaleX"></div>
+          <div class="play button" data-example-id="scaleX"></div>
+          <div class="cancel button" data-example-id="scaleX"></div>
+          <div class="finish button" data-example-id="scaleX"></div>
+          <div class="reverse button" data-example-id="scaleX"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">scaleY</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="scaleY" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="scaleY"></div>
+          <div class="play button" data-example-id="scaleY"></div>
+          <div class="cancel button" data-example-id="scaleY"></div>
+          <div class="finish button" data-example-id="scaleY"></div>
+          <div class="reverse button" data-example-id="scaleY"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">scaleZ (oblique view)<span class="not-supported"> (Not supported)</span></div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="scaleZ" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="scaleZ"></div>
+          <div class="play button" data-example-id="scaleZ"></div>
+          <div class="cancel button" data-example-id="scaleZ"></div>
+          <div class="finish button" data-example-id="scaleZ"></div>
+          <div class="reverse button" data-example-id="scaleZ"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">rotate</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="rotate" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="rotate"></div>
+          <div class="play button" data-example-id="rotate"></div>
+          <div class="cancel button" data-example-id="rotate"></div>
+          <div class="finish button" data-example-id="rotate"></div>
+          <div class="reverse button" data-example-id="rotate"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">rotateX<span class="not-supported"> (Not supported)</span></div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="rotateX" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="rotateX"></div>
+          <div class="play button" data-example-id="rotateX"></div>
+          <div class="cancel button" data-example-id="rotateX"></div>
+          <div class="finish button" data-example-id="rotateX"></div>
+          <div class="reverse button" data-example-id="rotateX"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">rotateY<span class="not-supported"> (Not supported)</span></div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="rotateY" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="rotateY"></div>
+          <div class="play button" data-example-id="rotateY"></div>
+          <div class="cancel button" data-example-id="rotateY"></div>
+          <div class="finish button" data-example-id="rotateY"></div>
+          <div class="reverse button" data-example-id="rotateY"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">rotateZ<span class="not-supported"> (Not supported)</span></div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="rotateZ" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="rotateZ"></div>
+          <div class="play button" data-example-id="rotateZ"></div>
+          <div class="cancel button" data-example-id="rotateZ"></div>
+          <div class="finish button" data-example-id="rotateZ"></div>
+          <div class="reverse button" data-example-id="rotateZ"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">skewX</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="skewX" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="skewX"></div>
+          <div class="play button" data-example-id="skewX"></div>
+          <div class="cancel button" data-example-id="skewX"></div>
+          <div class="finish button" data-example-id="skewX"></div>
+          <div class="reverse button" data-example-id="skewX"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">skewY</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="skewY" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="skewY"></div>
+          <div class="play button" data-example-id="skewY"></div>
+          <div class="cancel button" data-example-id="skewY"></div>
+          <div class="finish button" data-example-id="skewY"></div>
+          <div class="reverse button" data-example-id="skewY"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">opacity</div>
+        <div class="anim-box">
+          <div class="anim-default" style="left: 110px; top: 110px;"></div>
+          <div class="anim" id="opacity" style="left: 110px; top: 110px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="opacity"></div>
+          <div class="play button" data-example-id="opacity"></div>
+          <div class="cancel button" data-example-id="opacity"></div>
+          <div class="finish button" data-example-id="opacity"></div>
+          <div class="reverse button" data-example-id="opacity"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">scrollTop</div>
+        <div class="anim-box">
+          <div class="anim-box" id="scroll" style="background-color: #eee; margin: 0;">
+            <p>I walk slowly, but I never walk backward.</p>
+            <p>There is more to life than increasing its speed.</p>
+            <p>Without haste, but without rest.</p>
+            <p>There is always light behind the clouds.</p>
+            <p>If you can dream it, you can do it.</p>
+            <p>All your dreams can come true if you have the courage to pursue them.</p>
+            <p>Kites rise highest against the wind – not with it.</p>
+            <p>Growth is often a painful process.</p>
+            <p>Our greatest glory is not in never failing, but in rising up every time we fail.</p>
+            <p>Failure is a detour, not a dead-end street.</p>
+            <p>Although the world is full of suffering, it is full of the overcoming of it.</p>
+            <p>My life didn’t please me, so I created my life.</p>
+            <p>Life isn’t about finding yourself. Life is about creating yourself.</p>
+            <p>Do one thing everyday that scares you.</p>
+            <p>The future starts today, not tomorrow.</p>
+            <p>Conquer yourself rather than the world.</p>
+            <p>Life is like riding a bicycle. To keep your balance you must keep moving.</p>
+            <p>Happiness depends upon ourselves.</p>
+            <p>Fear always springs from ignorance.</p>
+            <p>The most important thing in communication is hearing what isn’t said.</p>
+            <p>Experience is not what happens to you. It is what you do with what happens to you.</p>
+            <p>Peace begins with a smile.</p>
+            <p>Love is doing small things with great love.</p>
+            <p>My true religion is kindness.</p>
+            <p>Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.</p>
+            <p>It always seems impossible until it’s done.</p>
+            <p>Always bear in mind that your own resolution to succeed is more important than any one thing.</p>
+            <p>In the middle of difficulty lies opportunity.</p>
+            <p>Genius is 1 percent inspiration and 99 percent perspiration.</p>
+            <p>Imagination means nothing without doing.</p>
+            <p>I will prepare and some day my chance will come.</p>
+            <p>Patience is also a form of action.</p>
+            <p>Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.</p>
+            <p>A goal without a plan is just a wish.</p>
+            <p>A wise man will make more opportunities than he finds.</p>
+            <p>Doubt is the origin of wisdom.</p>
+            <p>Saying is one thing and doing is another.</p>
+            <p>A quitter never wins and a winner never quits.</p>
+            <p>Knowing is not enough; we must apply. Willing is not enough; we must do.</p>
+            <p>Indecision is often worse than wrong action.</p>
+            <p>Don’t find fault, find a remedy; anybody can complain.</p>
+            <p>Quality means doing it right when no one is looking.</p>
+            <p>The competitor to be feared is one who never bothers about you at all, but goes on making his own business better all the time.</p>
+            <p>Your time is limited, so don’t waste it living someone else’s life.</p>
+            <p>Stay hungry. Stay foolish.</p>
+            <p>Innovation distinguishes between a leader and a follower.</p>
+            <p>You can’t just ask customers what they want and then try to give that to them. By the time you get it built, they’ll want something new.</p>
+            <p>The only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle.</p>
+          </div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="scroll"></div>
+          <div class="play button" data-example-id="scroll"></div>
+          <div class="cancel button" data-example-id="scroll"></div>
+          <div class="finish button" data-example-id="scroll"></div>
+          <div class="reverse button" data-example-id="scroll"></div>
+        </div>
+      </div>
+      <div class="example">
+        <div class="caption">backgroundColor</div>
+        <div class="anim-box">
+          <div class="anim" id="color" style="left: 20px; top: 20px; width: 200px; height: 200px;"></div>
+        </div>
+        <div class="anim-controller">
+          <div class="pause button" data-example-id="color"></div>
+          <div class="play button" data-example-id="color"></div>
+          <div class="cancel button" data-example-id="color"></div>
+          <div class="finish button" data-example-id="color"></div>
+          <div class="reverse button" data-example-id="color"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="copyright">Copyright &copy; KNOWLEDGECODE</p>
+    </footer>
+    <script src="/js/silktouch.min.js?_=20160515"></script>
+    <script src="/js/velvet.min.js?_=20160515"></script>
+    <script src="/js/demo.min.js?_=20160515"></script>
+  </body>
+</html>

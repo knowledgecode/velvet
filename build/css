@@ -1,0 +1,6 @@
+#!/bin/sh -eu
+
+yuicompressor --type css -o ../css/common.min.css ../css/common.css
+yuicompressor --type css -o ../css/index.min.css ../css/index.css
+yuicompressor --type css -o ../css/demo.min.css ../css/demo.css
+
