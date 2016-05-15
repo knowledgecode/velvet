@@ -1,0 +1,35 @@
+{
+  "name": "velvet",
+  "description": "A JavaScript Library for DOM Animation as smooth as Velvet",
+  "version": "0.1.0",
+  "main": "velvet.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.json",
+    "*.sh",
+    "*.yml",
+    "node_modules",
+    "test"
+  ],
+  "keywords": [
+    "animation",
+    "animate",
+    "transform",
+    "transition",
+    "velocity"
+  ],
+  "authors": [
+    "knowledgecode <knowledgecode@gmail.com>"
+  ],
+  "homepage": "https://github.com/knowledgecode/velvet",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/knowledgecode/velvet.git"
+  }
+}
