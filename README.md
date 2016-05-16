@@ -1,11 +1,11 @@
 # Velvet
-A JavaScript library for DOM animation as smooth as Velvet, which was inspired by [Velocity](http://julian.com/research/velocity/) and [jQuery Transit](http://ricostacruz.com/jquery.transit/).
+A JavaScript library for DOM animations as smooth as Velvet, which was inspired by [Velocity](http://julian.com/research/velocity/) and [jQuery Transit](http://ricostacruz.com/jquery.transit/).
 
 ## TL;DR
 See [demo](https://knowledgecode.github.io/velvet/) page.
 
 ## Features
-- **Animation with JavaScript**  
+- **Animations with JavaScript**  
 It's a sort of manipulator to easily manipulate an element's transform property with JavaScript. You can freely **_play_**, **_pause_** and **_reverse_** the animation.
 
 - **Web Animations API**  
@@ -32,14 +32,14 @@ $ bower install velvetjs
 ## Usage
 *CommonJS:*
 ```JavaScript
-var velvet = require('velvet');
+var velvet = require('velvetjs');
 var div = velvet(document.getElementById('div'));
 div.weave({ translateX: 100 }, { durarion: 400 });
 ```
 
 *AMD:*
 ```JavaScript
-require(['velvet'], function (velvet) {
+require(['path/to/velvet'], function (velvet) {
     var div = velvet(document.getElementById('div'));
     div.weave({ translateX: 100 }, { durarion: 400 });
 });
