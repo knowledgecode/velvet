@@ -1,7 +1,7 @@
 {
   "name": "velvetjs",
-  "version": "0.1.0",
-  "description": "A JavaScript Library for DOM Animation as smooth as Velvet",
+  "version": "0.1.1",
+  "description": "A JavaScript Library for DOM Animations as smooth as Velvet",
   "main": "velvet.js",
   "scripts": {
     "compile": "./compile.sh"
