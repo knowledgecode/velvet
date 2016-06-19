@@ -1,11 +1,10 @@
-/*global velvet, SilkTouch */
-(function () {
+/*global velvet, silktouch */
+(function (global) {
     'use strict';
 
     var onload;
 
-    if (~navigator.userAgent.indexOf('compatible; MSIE 9.')) {
-//    if (velvet.msie) {
+    if (global.ie === '9') {
         onload = function () {
             var cube = document.getElementById('cube');
             var w = velvet(cube).weave({
@@ -16,7 +15,7 @@
 
             var pause = false;
 
-            new SilkTouch(cube).on(function () {
+            silktouch.on('cube', '#cube', function () {
                 if (pause) {
                     w.play();
                 } else {
@@ -25,10 +24,8 @@
                 pause = !pause;
             });
         };
-//    } else if (~navigator.userAgent.indexOf('compatible; MSIE')) {
-    } else if (~navigator.userAgent.indexOf('compatible; MSIE 1')) {
+    } else if (global.ie === '10' || global.ie === '11') {
         onload = function () {
-            var cube = document.getElementById('cube');
             var cube1 = velvet(document.getElementById('cube1'));
             var cube2 = velvet(document.getElementById('cube2'));
             var cube3 = velvet(document.getElementById('cube3'));
@@ -79,7 +76,7 @@
 
             var pause = false;
 
-            new SilkTouch(cube).on(function () {
+            silktouch.on('cube', '#cube', function () {
                 if (pause) {
                     w1.play();
                     w2.play();
@@ -109,7 +106,7 @@
 
             var pause = false;
 
-            new SilkTouch(cube).on(function () {
+            silktouch.on('cube', '#cube', function () {
                 if (pause) {
                     w.play();
                 } else {
@@ -122,5 +119,5 @@
 
     window.addEventListener('DOMContentLoaded', onload);
 
-}());
+}(this));
 

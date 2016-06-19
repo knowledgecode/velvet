@@ -1,13 +1,16 @@
-/*global velvet, SilkTouch */
-(function () {
+/*global velvet, silktouch */
+(function (global) {
     'use strict';
 
     var forEach = Array.prototype.forEach;
 
-//    if (velvet.msie) {
-    if (~navigator.userAgent.indexOf('compatible; MSIE 9.')) {
+    if (global.ie === '9') {
         forEach.call(document.getElementsByClassName('not-supported'), function (span) {
             span.style.display = 'inline';
+        });
+    } else if (~navigator.userAgent.indexOf('Android 4.0')) {
+        forEach.call(document.getElementsByClassName('anim-box'), function (box) {
+            box.style.overflowY = 'hidden';
         });
     }
 
@@ -51,46 +54,36 @@
             examples[id] = styles[id](document.getElementById(id));
         });
 
-        forEach.call(document.querySelectorAll('.play'), function (element) {
-            new SilkTouch(element).on(function () {
-                examples[this.getAttribute('data-example-id')].play();
-                this.parentElement.getElementsByClassName('play')[0].style.display = 'none';
-            }, false);
+        silktouch.on('play', '.play', function () {
+            examples[this.getAttribute('data-example-id')].play();
+            this.parentElement.getElementsByClassName('play')[0].style.display = 'none';
         });
 
-        forEach.call(document.querySelectorAll('.pause'), function (element) {
-            new SilkTouch(element).on(function () {
-                examples[this.getAttribute('data-example-id')].pause();
-                this.parentElement.getElementsByClassName('play')[0].style.display = '';
-            }, false);
+        silktouch.on('pause', '.pause', function () {
+            examples[this.getAttribute('data-example-id')].pause();
+            this.parentElement.getElementsByClassName('play')[0].style.display = '';
         });
 
-        forEach.call(document.querySelectorAll('.cancel'), function (element) {
-            new SilkTouch(element).on(function () {
-                examples[this.getAttribute('data-example-id')].cancel();
-            }, false);
+        silktouch.on('cancel', '.cancel', function () {
+            examples[this.getAttribute('data-example-id')].cancel();
         });
 
-        forEach.call(document.querySelectorAll('.finish'), function (element) {
-            new SilkTouch(element).on(function () {
-                examples[this.getAttribute('data-example-id')].finish();
-            }, false);
+        silktouch.on('finish', '.finish', function () {
+            examples[this.getAttribute('data-example-id')].finish();
         });
 
-        forEach.call(document.querySelectorAll('.reverse'), function (element) {
-            new SilkTouch(element).on(function () {
-                var w = examples[this.getAttribute('data-example-id')];
+        silktouch.on('reverse', '.reverse', function () {
+            var w = examples[this.getAttribute('data-example-id')];
 
-                if (w.direction() > 0) {
-                    this.style.backgroundColor = '#7f7';
-                } else {
-                    this.style.backgroundColor = '';
-                }
-                w.reverse();
-                this.parentElement.getElementsByClassName('play')[0].style.display = 'none';
-            }, false);
+            if (w.direction() > 0) {
+                this.style.backgroundColor = '#7f7';
+            } else {
+                this.style.backgroundColor = '';
+            }
+            w.reverse();
+            this.parentElement.getElementsByClassName('play')[0].style.display = 'none';
         });
     });
 
-}());
+}(this));
 
