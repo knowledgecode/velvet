@@ -5,7 +5,7 @@
     'use strict';
 
     var webAnimations = (function () {
-        return !!document.createElement('div').animate;
+        return 'animate' in Element.prototype && !!(document.createElement('div').animate([]).play);
     }());
 
     var cubic_bezier = (function () {
@@ -159,7 +159,7 @@
                     for (i = 0; i < count; i++) {
                         queue[i](timestamp);
                     }
-                    queue = queue.splice(count);
+                    queue.splice(0, count);
                     timer();
                 }, delay);
                 return timerId;
@@ -645,4 +645,3 @@
     }
 
 }(this));
-
