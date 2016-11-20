@@ -1,7 +1,7 @@
 {
   "name": "velvet",
   "description": "A JavaScript Library for DOM Animations as smooth as Velvet",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "velvet.js",
   "moduleType": [
     "amd",
@@ -18,11 +18,14 @@
     "test"
   ],
   "keywords": [
-    "animation",
     "animate",
+    "animation",
+    "css animation",
+    "css transition",
     "transform",
     "transition",
-    "velocity"
+    "velocity",
+    "web animation"
   ],
   "authors": [
     "knowledgecode <knowledgecode@gmail.com>"

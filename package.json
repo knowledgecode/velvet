@@ -1,21 +1,25 @@
 {
   "name": "velvetjs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A JavaScript Library for DOM Animations as smooth as Velvet",
   "main": "velvet.js",
   "scripts": {
-    "compile": "./compile.sh"
+    "build": "node build velvet.dev.js > velvet.js",
+    "compile": "compile velvet.js velvet.min.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/knowledgecode/velvet.git"
   },
   "keywords": [
-    "animation",
     "animate",
+    "animation",
+    "css animation",
+    "css transition",
     "transform",
     "transition",
-    "velocity"
+    "velocity",
+    "web animation"
   ],
   "author": "KNOWLEDGECODE",
   "license": "MIT",
