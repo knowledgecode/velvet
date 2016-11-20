@@ -13,10 +13,10 @@ It preferentially uses [Web Animations API](https://w3c.github.io/web-animations
 
 ## Policy
 - **Speedster**  
-Pursue speed than *Swiss Army knife*
+It pursues speed than *Swiss Army knife*.
 
 - **Minimalist**  
-Keep it as simple and small as possible (2.6kb (minified and gzipped) for now)
+It keeps it as simple and small as possible (2.6kb (minified and gzipped) for now).
 
 ## Installation
 *npm:*
@@ -31,14 +31,14 @@ $ bower install velvetjs
 
 ## Usage
 *CommonJS:*
-```JavaScript
+```javascript
 var velvet = require('velvetjs');
 var div = velvet(document.getElementById('div'));
 div.weave({ translateX: 100 }, { durarion: 400 });
 ```
 
 *AMD:*
-```JavaScript
+```javascript
 require(['path/to/velvet'], function (velvet) {
     var div = velvet(document.getElementById('div'));
     div.weave({ translateX: 100 }, { durarion: 400 });
@@ -59,7 +59,7 @@ require(['path/to/velvet'], function (velvet) {
 - **element**: A target element (optional)
 
 The `velvet` function returns a `Velvet` object or a `Textile` object. If call this with a parameter, it returns a `Velvet` object. If omit the parameter, it returns a `Textile` object.  
-```JavaScript
+```javascript
 var v = velvet(document.getElementById(('div'));    // Returns a Velvet object
 var t = velvet();   // Returns a Textile object
 ```
@@ -70,7 +70,7 @@ var t = velvet();   // Returns a Textile object
 - **options**: Animation options
 
 The `weave` method creates an animation. The details of arguments are as follows:
-```JavaScript
+```javascript
 var w = v.weave({
     translateX: 100,    // (px)
     translateY: 200,    // (px)
@@ -107,7 +107,7 @@ This method returns a `Weaver` object and the animation will automatically start
 - **styles**: CSS Styles
 
 The `style` method set styles to the element. Since the above `weave` method ignores the preset `transform` and `opacity` property, you need to set the styles if want to make started the animation from status different from default (position, size, etc.).
-```JavaScript
+```javascript
 // fade-in
 v.style({
     translateX: 100,
@@ -120,7 +120,7 @@ v.style({
 ```
 
 You may also set other properties with this method.
-```JavaScript
+```javascript
 v.style({
     position: 'absolute',
     left: '10px',   // In this case you need to append unit. 10 -> 10px
@@ -128,7 +128,7 @@ v.style({
 });
 ```
 **NOTE:** *Since this method will not take care of Vendor Prefix, for instance, you will need to set them like this:*  
-```JavaScript
+```javascript
 v.style({
     '-webkit-transform-origin': 'left top'
     '-moz-transform-origin': 'left top'
@@ -145,7 +145,7 @@ v.style({
 - **cb**: A callback function called per frame
 
 The `weave` method creates an animation other than `transform` and `opacity`. This is an example of scrolling a window:
-```JavaScript
+```javascript
 var w = t.weave([0], [200], {
     delay: 1000,    // (ms)
     duration: 400,  // (ms)
@@ -174,7 +174,7 @@ The `finish` method goes to the end position of the animation, and stops.
 The `cancel` method goes back to the start position of the animation, and stops.
 #### *w.reverse()*
 The `reverse` method reverses the current play direction, and starts to play the animation.
-```JavaScript
+```javascript
 v.weave({
     translateX: 100
 }, {
@@ -197,7 +197,7 @@ For better performance, set `absolute` or `fixed` to the element's `position` pr
 ```
 ### *Combo Animations with Promise*
 In order to create Combo Animations use Promise like this:
-```JavaScript
+```javascript
 var div = velvet(document.getElementById(('div'));
 
 Promise.resolve().then(function () {
@@ -235,7 +235,7 @@ Promise.resolve().then(function () {
 - Proper test
 - Multiple elements control
 - Customizing cubic bezier
-- Vender Prefix support for style method
+- Vendor Prefix support for `style` method
 
 ## Supported browser
 Chrome, Firefox, Safari, Opera, Android Browser 4.0+, iOS Safari, Edge and IE9+
