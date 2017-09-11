@@ -16,7 +16,7 @@ It preferentially uses [Web Animations API](https://w3c.github.io/web-animations
 It pursues speed than *Swiss Army knife*.
 
 - **Minimalist**  
-It keeps it as simple and small as possible (2.6kb (minified and gzipped) for now).
+It keeps it as simple and small as possible (3.3kb (minified and gzipped) for now).
 
 ## Installation
 *npm:*
@@ -24,7 +24,7 @@ It keeps it as simple and small as possible (2.6kb (minified and gzipped) for no
 $ npm install velvetjs
 ```
 
-*Bower:*
+*Bower(Deprecated):*
 ```shell
 $ bower install velvetjs
 ```
@@ -56,7 +56,7 @@ require(['path/to/velvet'], function (velvet) {
 
 ## API
 ### *velvet([element])*
-- **element**: A target element (optional)
+- **element**: One or more target elements. (optional)
 
 The `velvet` function returns a `Velvet` object or a `Textile` object. If call this with a parameter, it returns a `Velvet` object. If omit the parameter, it returns a `Textile` object.  
 ```javascript
@@ -233,13 +233,13 @@ Promise.resolve().then(function () {
 
 ## TODO
 - Proper test
-- Multiple elements control
+- ~~Multiple elements control~~
 - Customizing cubic bezier
 - Vendor Prefix support for `style` method
+- Returning a Promise
 
 ## Supported browser
 Chrome, Firefox, Safari, Opera, Android Browser 4.0+, iOS Safari, Edge and IE9+
 
 ## Lisence
 MIT
-
