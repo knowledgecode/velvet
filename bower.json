@@ -1,7 +1,7 @@
 {
   "name": "velvet",
   "description": "A JavaScript Library for DOM Animations as smooth as Velvet",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "velvet.js",
   "moduleType": [
     "amd",
