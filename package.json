@@ -1,6 +1,6 @@
 {
   "name": "velvetjs",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A JavaScript Library for DOM Animations as smooth as Velvet",
   "main": "velvet.js",
   "scripts": {
@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/knowledgecode/velvet/issues"
   },
-  "homepage": "https://github.com/knowledgecode/velvet"
+  "homepage": "https://github.com/knowledgecode/velvet",
+  "dependencies": {
+    "bezier-easing": "^2.0.3"
+  }
 }
